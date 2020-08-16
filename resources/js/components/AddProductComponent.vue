@@ -44,7 +44,7 @@
 
         methods: {
             createProduct(){
-                let uri = 'http://chart.test/products';
+                let uri = 'http://localhost:8000/products';
                 axios.post(uri, this.product).then((response)=>{
                     window.location.reload();
                 });

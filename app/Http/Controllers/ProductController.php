@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductController extends Controller
 {
@@ -17,6 +18,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->year = $request->year;
         $product->price = $request->price;
+        dump($product);
         $product->save();
         return response()->json(['success'=>'The product was created succesfully']);
     }

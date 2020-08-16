@@ -13,9 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <add-product-component></add-product-component>
-
+                    <example-component></example-component>
                     <chart-component></chart-component>
                 </div>
             </div>

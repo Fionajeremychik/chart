@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/{any}', function() {
+    return view('welcome');
+})->where('any','^(?!api\/)[\/\w\.-]*');
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/products', 'ProductionController@index');
-Route::post('/products', 'ProductionController@store');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/products', 'ProductController@index');
+Route::post('/products', 'ProductController@store');
 
 Auth::routes();
 
